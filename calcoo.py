@@ -17,15 +17,19 @@ class Calculadora():
     def resta(self):
         return self.operando1-self.operando2
 
-if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        sys.exit("Úsalo así: pyhton3 calcoo.py operando1 operador operando2")
 
-    operacion = Calculadora(int(sys.argv[1]), int(sys.argv[3]))
 
     try:
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
     except ValueError:
-        sys.exit("Error: Non numerical parameters")
+        sys.exit("Error: Non numerical parameters. Only 'int' parameters.")
+
+if __name__ == "__main__":
+
+    operacion = Calculadora(int(sys.argv[1]), int(sys.argv[3]))
 
     if sys.argv[2] == "suma":
         resultado = operacion.suma()
