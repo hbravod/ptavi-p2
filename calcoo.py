@@ -12,15 +12,13 @@ class Calculadora():
         self.operando2 = operando2
 
     def suma(self):
-        return self.operando1+self.operando2
+        return self.operando1 + self.operando2
 
     def resta(self):
-        return self.operando1-self.operando2
+        return self.operando1-  self.operando2
 
     if len(sys.argv) != 4:
         sys.exit("Úsalo así: pyhton3 calcoo.py operando1 operador operando2")
-
-
     try:
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
