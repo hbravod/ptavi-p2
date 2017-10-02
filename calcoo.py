@@ -4,9 +4,10 @@
 
 import sys
 
+
 class Calculadora():
 
-    def __init__(self,operando1,operando2):
+    def __init__(self, operando1, operando2):
         """Esto es el método iniciliazador"""
         self.operando1 = operando1
         self.operando2 = operando2
@@ -18,13 +19,9 @@ class Calculadora():
         return self.operando1 - self.operando2
 
 if __name__ == "__main__":
-
-
     if len(sys.argv) != 4:
         sys.exit("Úsalo así: pyhton3 calcoo.py operando1 operador operando2")
     operacion = Calculadora(int(sys.argv[1]), int(sys.argv[3]))
-
-
     try:
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
