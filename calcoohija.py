@@ -7,12 +7,12 @@ from calcoo import Calculadora
 
 
 class CalculadoraHija(Calculadora):
-    def multiplica(self):
-        return self.operando1 * self.operando2
+    def multiplica(self, operando1, operando2):
+        return operando1 * operando2
 
-    def divide(self):
+    def divide(self, operando1, operando2):
         try:
-            return self.operando1 / self.operando2
+            return operando1 / operando2
         except ZeroDivisionError:
             sys.exit("Division by zero is not allowed.")
 
