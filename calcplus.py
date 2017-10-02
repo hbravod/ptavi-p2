@@ -30,31 +30,16 @@ if __name__ == "__main__":
             resultado1 = int(lista[1])+int(lista[2])+int(lista[3])+int(lista[4])+int(lista[5])
             print(resultado1)
         elif primero == "resta":
-            resultado2 = int(lista[1])-int(lista[2])-int(lista[3])-int(lista[4])-int(lista[5])
-            print(resultado2)
+            resultado2 = int(lista[1])-int(lista[2])
+            re = resultado2-int(lista[3])
+            res = re-int(lista[4])
+            resu = res-int(lista[5])
+            resultado3 = resu-int(lista[6])
+            print(resultado3)
         elif primero == "multiplica":
-            resultado3 = int(lista[1])*int(lista[2])*int(lista[3])
-            print(resultado3)   
+            resultado4 = int(lista[1])*int(lista[2])*int(lista[3])
+            print(resultado4)   
         elif primero == "divide":
-            resultado4 = int(lista[1])/int(lista[2])/int(lista[3])
-            print(resultado4)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            resultado5 = int(lista[1])/int(lista[2])/int(lista[3])
+            print(resultado5)
 fichero.close      
