@@ -11,28 +11,34 @@ if len(sys.argv) != 2:
 
 if __name__ == "__main__":
 
-    fichero = open('/home/alumnos/hbravod/ptavi/ptavi-p2/operaciones', 'r')
-    num = fichero.readlines()
+    fichero = open(sys.argv[1], 'r')
+    texto = fichero.readlines()
 
-    for line in num:
+    calculadora = CalculadoraHija()
+
+    for line in texto:
         lista = line.split(',')
         primero = lista[0]
+        numbers = lista[1:]
 
         if primero == "suma":
-            resultado = int(lista[1])+int(lista[2])+int(lista[3])+int(lista[4])
-            resultado1 = resultado+int(lista[5])
-            print(resultado1)
+            resultado = int(lista[1])
+            for number in numbers[1:]:
+                resultado = calculadora.suma(resultado, int(number))
+            print(resultado)
         elif primero == "resta":
-            resultado2 = int(lista[1])-int(lista[2])
-            re = resultado2-int(lista[3])
-            res = re-int(lista[4])
-            resu = res-int(lista[5])
-            resultado3 = resu-int(lista[6])
-            print(resultado3)
+            resultado = int(lista[1])
+            for number in numbers[1:]:
+                resultado = calculadora.resta(resultado, int(number))
+            print(resultado)
         elif primero == "multiplica":
-            resultado4 = int(lista[1])*int(lista[2])*int(lista[3])
-            print(resultado4)
+            resultado = int(lista[1])
+            for number in numbers[1:]:
+                resultado = calculadora.multiplica(resultado, int(number))
+            print(resultado)
         elif primero == "divide":
-            resultado5 = int(lista[1])/int(lista[2])/int(lista[3])
-            print(resultado5)
+            resultado = int(lista[1])
+            for number in numbers[1:]:
+                resultado = calculadora.divide(resultado, int(number))
+            print(resultado)
 fichero.close
