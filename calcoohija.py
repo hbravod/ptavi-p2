@@ -7,10 +7,9 @@ from calcoo import Calculadora
 
 
 class CalculadoraHija(Calculadora):
-   
     def multiplica(self):
         return self.operando1 * self.operando2
-    
+
     def divide(self):
         try:
             return self.operando1 / self.operando2
@@ -20,7 +19,7 @@ class CalculadoraHija(Calculadora):
 if __name__ == "__main__":
 
     if len(sys.argv) != 4:
-        sys.exit("Úsalo así: pyhton3 calcoohija.py operando1 operador operando2")
+        sys.exit("Úsalo así: pyhton3 calcoohija.py operand1 operador operand2")
     try:
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
