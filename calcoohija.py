@@ -5,6 +5,7 @@
 import sys
 from calcoo import Calculadora
 
+
 class CalculadoraHija(Calculadora):
    
     def multiplica(self):
@@ -16,6 +17,8 @@ class CalculadoraHija(Calculadora):
         except ZeroDivisionError:
             sys.exit("Division by zero is not allowed.")
 
+if __name__ == "__main__":
+
     if len(sys.argv) != 4:
         sys.exit("Úsalo así: pyhton3 calcoohija.py operando1 operador operando2")
     try:
@@ -23,8 +26,6 @@ class CalculadoraHija(Calculadora):
         operando2 = int(sys.argv[3])
     except ValueError:
         sys.exit("Error: Non numerical parameters. Only 'int' parameters.")
-
-if __name__ == "__main__":
 
     operacion = CalculadoraHija(int(sys.argv[1]), int(sys.argv[3]))
 
